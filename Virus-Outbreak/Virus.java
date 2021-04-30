@@ -6,7 +6,8 @@ class Virus
         int sequenceLength=sequence.length()-1;
         int sampleLength=sample.length()-1;
 
-        int i,j;
+        int i;  //Index of sample
+        int j;  //Index of sequence
         i=j=0;
 
         while(i<sampleLength && j<sequenceLength)
@@ -18,7 +19,7 @@ class Virus
             j++;
         }
 
-        if(i==sampleLength)
+        if(i==sampleLength) //If i matches the sample length, i.e. It is a subsequence.
             System.out.println("POSITIVE");
         else
             System.out.println("NEGATIVE");
