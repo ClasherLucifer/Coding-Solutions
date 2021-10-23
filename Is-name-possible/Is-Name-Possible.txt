@@ -1,0 +1,40 @@
+Is name possible ? 
+
+Check the possibility of names from the given characters
+
+Input Format
+input1: String (Possibly the list of characters)
+input2: String (List of narnes)
+
+Constraints
+Input 1 will have at least 2 characters
+Each character can be used n number of times
+All the characters in input will be in lowercase
+Input 2 will have at Least one word which matches the characters in input1
+
+Output Format 
+String (Possible names from the given characters in input2 with ";" as a delimiter + number total number of words)
+
+Sample Input 0
+hidasyun
+hyd;b1r;delhi;goa;chennai;india;usa;idn
+
+Sample Output 0
+hyd;india;usa;idn4
+
+Explanation 0
+All the characters in words hyd, india, usa and idn from input 2 are available in inputl
+Total number of words: 4.
+Hence 4 is added in the end.
+
+Sample Input 1 
+mabgtinlope
+mango;apple;banana;guava;tea;ice;nut;grape;lemon
+
+Sample Output 1 
+mango;apple;banana;tea;lemon5
+
+Explanation 1 
+All the characters in words mango, apple, banana, tea and lemon from input 2 are available in inputl
+Total number of words:5.
+Hence 5 is added in the end.
