@@ -1,0 +1,61 @@
+Problem
+
+In a boxing competition, there are N teams, team i consists of Ai boxers. You need to line up the teams in the form of a circle, meaning that the first team is adjacent to the second team and the last team. In this competition, each time a team is selected they compete with the two neighboring teams, where many competitions take place. The teams compete in three-person competitions such that one person from each team will compete in all possible ways.
+This means that suppose the team i was chosen to compete, the number of competitions will be (A((i-1)mod n) * Ai * A((i+1)mod n)) then team i is eliminated from the competition. After a team is eliminated, the two adjacent teams become adjacent to each other and this continues as long as there are at least three teams within the circle.
+The director of the competition wants to choose the order of the teams that would start participating such that the largest possible number of competitions take place.
+Your task is to find the largest possible number of competitions that take place assuming that the director picks the order of teams optimally.
+
+Function Description
+
+Complete the Solve function in the editor below. It has the following parameter(s):
+			| Name | Type			| Description
+-----------------------------------------------------------------------
+Parameters	|   N  | Integer		| Number of teams
+			|   A  | Integer Array  | Number of bowlers in each team
+-----------------------------------------------------------------------
+Return		| The function must return an integer denoting the largest possible number of competitions.
+
+Constraints
+
+1<=N<=500
+1<=A[i]<=100
+
+Input Format For Custom Testing
+
+The first line contains an intger, N, denoting the number of elements in A.
+Each line i of the N subsequent lines (where 0<=i<=N) contains an integer describing A[i].
+
+Sample Cases
+
+Input
+3
+1
+2
+3
+Output
+6
+Output Description 
+We can choose anyone and the answer will be 6.
+1*2*3 = 6.
+
+Input
+4
+4
+4
+5
+5
+Output
+180
+Output Description
+First we will choose the third and the answer will increase by 5*5*4=100. Then the array will be like [4,4,5], then we can choose anyone and the answer will increase by 4*4*5=80 so the answer is 100+80=180.
+
+Input
+4
+3
+4
+5
+6
+Output
+192
+Output Description
+First, we will choose the third and the answer will increase by 4*5*6=120. Then the array will be like [3,4,6], then we can choose anyone and the answer will increase by 3*4*6=72. So the answer is 120+72=192.
